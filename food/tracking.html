@@ -7,99 +7,90 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
 <nav class="navbar">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon">🍔</div>Daddy <span>of</span> Tastes
-    </a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="nav-actions">
-      <button class="btn-icon">👤</button>
-      <a href="cart.html"><button class="cart-btn">🛒 Cart <span class="cart-count">0</span></button></a>
-    </div>
+    <a href="index.html" class="nav-logo"><div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>Daddy <span>of Tastes</span></a>
+    <div class="nav-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+    <div class="nav-actions"><a href="cart.html"><button class="cart-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> Cart <span class="cart-count">0</span></button></a></div>
     <div class="hamburger"><span></span><span></span><span></span></div>
   </div>
 </nav>
-<div class="mobile-menu">
-  <a href="index.html">🏠 Home</a>
-  <a href="menu.html">🍽️ Menu</a>
-  <a href="cart.html">🛒 Cart</a>
-</div>
+<div class="mobile-menu"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="cart.html">Cart</a></div>
 
 <div class="tracking-page">
   <div class="container">
-    <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);margin-bottom:28px">
-      <a href="index.html" style="color:var(--text-muted)">Home</a> <span>›</span>
-      <span style="color:var(--text)">Track Order</span>
+    <div class="breadcrumb" style="margin-bottom:24px">
+      <a href="index.html">Home</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <span>Track Order</span>
     </div>
 
-    <!-- Order header -->
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:28px">
       <div>
-        <h2 style="font-size:28px;font-weight:800">📍 Track Your Order</h2>
-        <p style="color:var(--text-muted);margin-top:4px">Order <strong style="color:var(--primary)">#DOT-48291</strong> • Placed 10 min ago</p>
+        <h2 style="font-size:26px;font-weight:800;color:var(--text-dark)">Track Your Order</h2>
+        <p style="color:var(--text-muted);margin-top:4px;font-size:14px">Order <strong style="color:var(--primary)">#DOT-48291</strong> &nbsp;•&nbsp; Placed 12 min ago</p>
       </div>
-      <div style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:50px;padding:8px 18px;color:var(--success);font-weight:700;font-size:14px;display:flex;align-items:center;gap:6px">
-        <span style="width:8px;height:8px;background:var(--success);border-radius:50%;animation:pulse 1.5s infinite;display:inline-block"></span>
-        On its way
+      <div style="background:var(--green-light);border:1.5px solid var(--green);border-radius:50px;padding:7px 16px;color:var(--green);font-weight:700;font-size:13px;display:flex;align-items:center;gap:6px">
+        <span style="width:7px;height:7px;background:var(--green);border-radius:50%;animation:pulse 1.5s infinite;display:inline-block"></span>
+        On Its Way
       </div>
     </div>
 
     <div class="tracking-layout">
-      <!-- Map -->
+      <!-- Map + rider -->
       <div>
         <div class="map-box">
-          <div class="map-placeholder">
-            <div style="font-size:80px">🗺️</div>
-            <p>Live map tracking</p>
-            <p style="font-size:12px;margin-top:4px">Your rider is 1.2 km away</p>
-            <!-- Animated delivery marker -->
-            <div style="margin-top:20px;font-size:36px;animation:float 2s ease-in-out infinite">🛵</div>
-          </div>
-        </div>
-
-        <!-- Rider info -->
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-top:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px">
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="width:50px;height:50px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-size:22px">🧑</div>
-            <div>
-              <h4 style="font-size:15px;font-weight:700">Carlos M.</h4>
-              <p style="font-size:13px;color:var(--text-muted)">Your Delivery Rider</p>
-              <div style="color:var(--accent);font-size:13px">★★★★★ 4.9</div>
+          <div style="text-align:center">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.4;display:block;margin:0 auto 12px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p style="color:var(--text-muted);font-size:14px">Live map tracking</p>
+            <p style="color:var(--text-light);font-size:12px;margin-top:4px">Your rider is 1.8 km away</p>
+            <div style="margin-top:20px;animation:float 2s ease-in-out infinite;display:inline-block">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
             </div>
           </div>
-          <div style="display:flex;gap:10px">
-            <a href="tel:+15550001234">
-              <button class="btn btn-outline btn-sm">📞 Call</button>
+        </div>
+
+        <!-- Rider card -->
+        <div style="background:var(--bg-white);border:1.5px solid var(--border);border-radius:14px;padding:18px;margin-top:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;box-shadow:var(--shadow-card)">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:46px;height:46px;border-radius:50%;background:var(--primary-light);border:2px solid var(--primary);display:flex;align-items:center;justify-content:center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <h4 style="font-size:15px;font-weight:700;color:var(--text-dark)">Ramesh Kumar</h4>
+              <p style="font-size:12px;color:var(--text-muted)">Delivery Partner</p>
+              <div style="color:var(--accent);font-size:12px;font-weight:600">★★★★★ 4.8</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <a href="tel:+919876543210" class="btn btn-outline btn-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11.9a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call
             </a>
-            <button class="btn btn-ghost btn-sm">💬 Chat</button>
+            <button class="btn btn-ghost btn-sm" onclick="showToast('Chat','Opening chat with rider...')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Chat
+            </button>
           </div>
         </div>
 
-        <!-- Order items summary -->
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-top:16px">
-          <h4 style="font-weight:700;margin-bottom:14px">🍽️ Your Order</h4>
-          <div style="display:flex;flex-direction:column;gap:10px" id="tracking-items">
-            <div style="font-size:13px;color:var(--text-muted)">Order items will show here</div>
+        <!-- Order items -->
+        <div style="background:var(--bg-white);border:1.5px solid var(--border);border-radius:14px;padding:18px;margin-top:14px;box-shadow:var(--shadow-card)">
+          <h4 style="font-weight:700;color:var(--text-dark);margin-bottom:14px;font-size:15px">Your Order Items</h4>
+          <div id="tracking-items" style="display:flex;flex-direction:column;gap:8px">
+            <p style="font-size:13px;color:var(--text-muted)">Items will appear here</p>
           </div>
-          <div style="border-top:1px solid var(--border);margin-top:14px;padding-top:12px;display:flex;justify-content:space-between;font-weight:700">
+          <div style="border-top:1.5px solid var(--border);margin-top:12px;padding-top:12px;display:flex;justify-content:space-between;font-weight:700;font-size:14px">
             <span>Total Paid</span>
             <span id="tracking-total" style="color:var(--primary)">—</span>
           </div>
         </div>
       </div>
 
-      <!-- Tracking steps -->
+      <!-- Steps -->
       <div>
         <div class="tracking-steps">
           <h3>Order Progress</h3>
-
           <div class="track-step">
             <div class="track-dot-col">
               <div class="track-dot done"></div>
@@ -107,23 +98,21 @@
             </div>
             <div class="track-info">
               <h4>Order Placed</h4>
-              <p>We received your order and payment was confirmed</p>
-              <div class="time">2:14 PM ✓</div>
+              <p>Payment confirmed, order received</p>
+              <div class="time">2:14 PM</div>
             </div>
           </div>
-
           <div class="track-step">
             <div class="track-dot-col">
               <div class="track-dot done"></div>
               <div class="track-line done"></div>
             </div>
             <div class="track-info">
-              <h4>Confirmed</h4>
-              <p>Restaurant accepted your order</p>
-              <div class="time">2:15 PM ✓</div>
+              <h4>Order Confirmed</h4>
+              <p>Restaurant has accepted your order</p>
+              <div class="time">2:15 PM</div>
             </div>
           </div>
-
           <div class="track-step">
             <div class="track-dot-col">
               <div class="track-dot done"></div>
@@ -131,88 +120,83 @@
             </div>
             <div class="track-info">
               <h4>Preparing Your Food</h4>
-              <p>Our chef is working on your order right now</p>
-              <div class="time">2:20 PM ✓</div>
+              <p>Our chef is cooking your order fresh</p>
+              <div class="time">2:20 PM</div>
             </div>
           </div>
-
           <div class="track-step">
             <div class="track-dot-col">
               <div class="track-dot active"></div>
               <div class="track-line"></div>
             </div>
             <div class="track-info">
-              <h4>Out for Delivery 🛵</h4>
-              <p>Carlos M. has picked up your order and is heading your way!</p>
+              <h4>Out for Delivery</h4>
+              <p>Ramesh Kumar has picked up your order</p>
               <div class="time">2:28 PM — Now</div>
             </div>
           </div>
-
           <div class="track-step">
             <div class="track-dot-col">
               <div class="track-dot"></div>
             </div>
             <div class="track-info">
               <h4>Delivered</h4>
-              <p>Estimated arrival: 2:42 PM</p>
+              <p>Estimated: 2:45 PM</p>
             </div>
           </div>
         </div>
 
-        <!-- ETA box -->
-        <div style="background:linear-gradient(135deg,rgba(255,69,0,0.1),rgba(255,184,0,0.05));border:1px solid rgba(255,69,0,0.2);border-radius:16px;padding:22px;margin-top:16px;text-align:center">
-          <p style="font-size:13px;color:var(--text-muted);margin-bottom:6px">Estimated Arrival</p>
-          <h2 style="font-size:36px;font-weight:900;color:var(--primary)" id="eta">14 min</h2>
-          <p style="font-size:13px;color:var(--text-muted);margin-top:4px">Arriving around 2:42 PM</p>
+        <!-- ETA -->
+        <div style="background:linear-gradient(135deg,var(--primary-light),var(--accent-light));border:1.5px solid rgba(249,115,22,0.2);border-radius:14px;padding:20px;margin-top:14px;text-align:center">
+          <p style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Estimated Arrival</p>
+          <h2 style="font-size:34px;font-weight:900;color:var(--primary)" id="eta-display">17 min</h2>
+          <p style="font-size:12px;color:var(--text-muted);margin-top:4px">Arriving around 2:45 PM</p>
         </div>
 
         <!-- Help -->
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-top:16px">
-          <h4 style="font-weight:700;margin-bottom:12px">Need Help?</h4>
+        <div style="background:var(--bg-white);border:1.5px solid var(--border);border-radius:14px;padding:18px;margin-top:14px;box-shadow:var(--shadow-card)">
+          <h4 style="font-weight:700;color:var(--text-dark);margin-bottom:12px;font-size:15px">Need Help?</h4>
           <div style="display:flex;flex-direction:column;gap:8px">
-            <button class="btn btn-outline btn-sm" style="justify-content:flex-start" onclick="showToast('Support','Connecting to support...','🎧')">🎧 Contact Support</button>
-            <button class="btn btn-outline btn-sm" style="justify-content:flex-start" onclick="showToast('Order','Modification not available for orders in transit','ℹ️')">✏️ Modify Order</button>
-            <button class="btn btn-outline btn-sm" style="justify-content:flex-start;color:var(--primary);border-color:rgba(255,69,0,0.3)" onclick="showToast('Cancel','This order cannot be cancelled — it is already on the way','❌')">❌ Cancel Order</button>
+            <button class="btn btn-outline btn-sm" style="justify-content:flex-start" onclick="showToast('Support','Connecting you to our support team...')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Contact Support
+            </button>
+            <button class="btn btn-outline btn-sm" style="justify-content:flex-start" onclick="showToast('Order Issue','Please contact support to report an issue')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Report an Issue
+            </button>
+            <button class="btn btn-sm" style="justify-content:flex-start;background:var(--bg-section);color:var(--red);border:1.5px solid rgba(220,38,38,0.2)" onclick="showToast('Cannot Cancel','Order is already out for delivery')">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              Cancel Order
+            </button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
-<footer>
-  <div class="container">
-    <div class="footer-bottom">
-      <p>© 2025 Daddy of Tastes. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+<footer><div class="container"><div class="footer-bottom"><p>© 2025 Daddy of Tastes. All rights reserved.</p></div></div></footer>
 
+<script src="assets/js/products.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
-// Show cart items in tracking
 document.addEventListener('DOMContentLoaded', () => {
   const cart = JSON.parse(localStorage.getItem('dot_cart') || '[]');
   const wrap = document.getElementById('tracking-items');
-  if (cart.length > 0) {
+  if (cart.length) {
     wrap.innerHTML = cart.map(i => `
-      <div style="display:flex;align-items:center;gap:10px">
-        <img src="${i.img}" style="width:38px;height:38px;border-radius:6px;object-fit:cover">
-        <div style="flex:1;font-size:13px">${i.name} × ${i.qty}</div>
-        <span style="font-size:13px;font-weight:700">$${(i.price * i.qty).toFixed(2)}</span>
-      </div>
-    `).join('');
-    const total = cart.reduce((s, i) => s + i.price * i.qty, 0) + 2.99;
-    document.getElementById('tracking-total').textContent = '$' + total.toFixed(2);
+      <div style="display:flex;align-items:center;gap:8px">
+        <img src="${i.img}" style="width:36px;height:36px;border-radius:6px;object-fit:cover;border:1px solid var(--border)" onerror="this.src='https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=40'">
+        <div style="flex:1;font-size:12px;color:var(--text-dark);font-weight:600">${i.name} × ${i.qty}</div>
+        <span style="font-size:12px;font-weight:700;color:var(--primary)">₹${(i.price*i.qty).toFixed(0)}</span>
+      </div>`).join('');
+    const total = cart.reduce((s,i) => s+i.price*i.qty, 0) + 40;
+    document.getElementById('tracking-total').textContent = '₹' + total;
   }
-
-  // Countdown timer
-  let mins = 14;
-  setInterval(() => {
-    if (mins > 0) mins--;
-    document.getElementById('eta').textContent = mins + ' min';
-  }, 60000);
+  let mins = 17;
+  const etaEl = document.getElementById('eta-display');
+  setInterval(() => { if (mins > 0) { mins--; etaEl.textContent = mins + ' min'; } }, 60000);
 });
 </script>
 </body>
