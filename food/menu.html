@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Daddy of Tastes</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🍔</div>
+      Daddy <span>of</span> Tastes
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-icon">👤</button>
+      <a href="cart.html">
+        <button class="cart-btn">🛒 Cart <span class="cart-count">0</span></button>
+      </a>
+    </div>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">🏠 Home</a>
+  <a href="menu.html">🍽️ Menu</a>
+  <a href="about.html">ℹ️ About</a>
+  <a href="contact.html">📞 Contact</a>
+  <a href="cart.html">🛒 Cart</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="tag" style="margin-bottom:14px;display:inline-block">Our Menu</span>
+    <h1>The Full <span>Menu</span></h1>
+    <p>Over 150+ dishes crafted with the finest ingredients. Find your next obsession.</p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="menu-filter-bar">
+  <div class="container">
+    <div class="filter-inner">
+      <div class="filter-cats">
+        <button class="filter-cat-btn active" data-cat="all">🍽️ All</button>
+        <button class="filter-cat-btn" data-cat="burgers">🍔 Burgers</button>
+        <button class="filter-cat-btn" data-cat="pizza">🍕 Pizzas</button>
+        <button class="filter-cat-btn" data-cat="chicken">🍗 Chicken</button>
+        <button class="filter-cat-btn" data-cat="tacos">🌮 Tacos</button>
+        <button class="filter-cat-btn" data-cat="noodles">🍜 Noodles</button>
+        <button class="filter-cat-btn" data-cat="salads">🥗 Salads</button>
+        <button class="filter-cat-btn" data-cat="desserts">🍰 Desserts</button>
+        <button class="filter-cat-btn" data-cat="drinks">🥤 Drinks</button>
+      </div>
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search dishes...">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MENU CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <!-- BURGERS -->
+    <h3 class="menu-section-title">🍔 Burgers</h3>
+    <div class="food-grid" style="margin-bottom:50px">
+      <div class="food-card" data-cat="burgers">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80" alt="Classic Smash Burger">
+          <div class="food-card-badges"><span class="badge badge-hot">🔥 Hot</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.9</span><span class="food-time">⏱ 20 min</span></div>
+          <h3>Classic Smash Burger</h3>
+          <p>Double smashed beef patty, cheddar, special sauce, crispy onions</p>
+          <div class="food-card-footer">
+            <span class="food-price">$12.99 <span class="old-price">$15.99</span></span>
+            <button class="add-btn" onclick="addToCart('b1','Classic Smash Burger',12.99,'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="burgers">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80" alt="BBQ Bacon Burger">
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.8</span><span class="food-time">⏱ 22 min</span></div>
+          <h3>BBQ Bacon Burger</h3>
+          <p>Smoky BBQ sauce, crispy bacon strips, caramelized onions, pickles</p>
+          <div class="food-card-footer">
+            <span class="food-price">$14.99</span>
+            <button class="add-btn" onclick="addToCart('b2','BBQ Bacon Burger',14.99,'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="burgers">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&q=80" alt="Mushroom Swiss Burger">
+          <div class="food-card-badges"><span class="badge badge-new">New</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.7</span><span class="food-time">⏱ 20 min</span></div>
+          <h3>Mushroom Swiss Burger</h3>
+          <p>Sautéed mushrooms, Swiss cheese, garlic aioli, fresh greens</p>
+          <div class="food-card-footer">
+            <span class="food-price">$13.49</span>
+            <button class="add-btn" onclick="addToCart('b3','Mushroom Swiss Burger',13.49,'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="burgers">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1609167830220-7164aa360951?w=500&q=80" alt="Spicy Jalapeño Burger">
+          <div class="food-card-badges"><span class="badge badge-hot">🌶 Spicy</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.8</span><span class="food-time">⏱ 20 min</span></div>
+          <h3>Spicy Jalapeño Burger</h3>
+          <p>Beef patty, jalapeño, pepper jack cheese, sriracha mayo</p>
+          <div class="food-card-footer">
+            <span class="food-price">$13.99</span>
+            <button class="add-btn" onclick="addToCart('b4','Spicy Jalapeño Burger',13.99,'https://images.unsplash.com/photo-1609167830220-7164aa360951?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIZZAS -->
+    <h3 class="menu-section-title">🍕 Pizzas</h3>
+    <div class="food-grid" style="margin-bottom:50px">
+      <div class="food-card" data-cat="pizza">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&q=80" alt="Spicy Pepperoni">
+          <div class="food-card-badges"><span class="badge badge-hot">🔥 Hot</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.8</span><span class="food-time">⏱ 25 min</span></div>
+          <h3>Spicy Pepperoni Pizza</h3>
+          <p>Crispy crust, tomato sauce, mozzarella, jalapeño pepperoni</p>
+          <div class="food-card-footer">
+            <span class="food-price">$16.99</span>
+            <button class="add-btn" onclick="addToCart('p1','Spicy Pepperoni Pizza',16.99,'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="pizza">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500&q=80" alt="BBQ Chicken Pizza">
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.9</span><span class="food-time">⏱ 28 min</span></div>
+          <h3>BBQ Chicken Pizza</h3>
+          <p>Tangy BBQ base, grilled chicken, red onions, fresh cilantro</p>
+          <div class="food-card-footer">
+            <span class="food-price">$18.99</span>
+            <button class="add-btn" onclick="addToCart('p2','BBQ Chicken Pizza',18.99,'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="pizza">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Margherita Classic">
+          <div class="food-card-badges"><span class="badge badge-offer">Best Value</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.7</span><span class="food-time">⏱ 22 min</span></div>
+          <h3>Margherita Classic</h3>
+          <p>San Marzano tomatoes, fresh mozzarella, basil, extra virgin olive oil</p>
+          <div class="food-card-footer">
+            <span class="food-price">$14.99</span>
+            <button class="add-btn" onclick="addToCart('p3','Margherita Classic',14.99,'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHICKEN -->
+    <h3 class="menu-section-title">🍗 Chicken</h3>
+    <div class="food-grid" style="margin-bottom:50px">
+      <div class="food-card" data-cat="chicken">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=500&q=80" alt="Crispy Fried Chicken">
+          <div class="food-card-badges"><span class="badge badge-offer">20% OFF</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.9</span><span class="food-time">⏱ 22 min</span></div>
+          <h3>Crispy Fried Chicken</h3>
+          <p>Secret 12-spice blend, golden crispy, served with dipping sauce</p>
+          <div class="food-card-footer">
+            <span class="food-price">$13.99 <span class="old-price">$17.49</span></span>
+            <button class="add-btn" onclick="addToCart('c1','Crispy Fried Chicken',13.99,'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="chicken">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=500&q=80" alt="Grilled Chicken Sandwich">
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.7</span><span class="food-time">⏱ 18 min</span></div>
+          <h3>Grilled Chicken Sandwich</h3>
+          <p>Marinated grilled breast, lettuce, tomato, honey mustard</p>
+          <div class="food-card-footer">
+            <span class="food-price">$11.99</span>
+            <button class="add-btn" onclick="addToCart('c2','Grilled Chicken Sandwich',11.99,'https://images.unsplash.com/photo-1561043433-aaf687c4cf04?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="chicken">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=500&q=80" alt="Chicken Wings">
+          <div class="food-card-badges"><span class="badge badge-hot">🔥 Hot</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.9</span><span class="food-time">⏱ 25 min</span></div>
+          <h3>Daddy's Fire Wings</h3>
+          <p>8 wings, buffalo sauce, ranch dip, celery sticks — addictive!</p>
+          <div class="food-card-footer">
+            <span class="food-price">$15.99</span>
+            <button class="add-btn" onclick="addToCart('c3','Daddy\'s Fire Wings',15.99,'https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TACOS & WRAPS -->
+    <h3 class="menu-section-title">🌮 Tacos & Wraps</h3>
+    <div class="food-grid" style="margin-bottom:50px">
+      <div class="food-card" data-cat="tacos">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=500&q=80" alt="Street Tacos">
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.7</span><span class="food-time">⏱ 15 min</span></div>
+          <h3>Street Style Tacos</h3>
+          <p>Corn tortillas, seasoned beef, cilantro, onion, fresh lime</p>
+          <div class="food-card-footer">
+            <span class="food-price">$10.99</span>
+            <button class="add-btn" onclick="addToCart('t1','Street Style Tacos',10.99,'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="tacos">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=500&q=80" alt="Chicken Wrap">
+          <div class="food-card-badges"><span class="badge badge-new">New</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.8</span><span class="food-time">⏱ 15 min</span></div>
+          <h3>Chipotle Chicken Wrap</h3>
+          <p>Grilled chicken, chipotle sauce, shredded cheese, fresh veggies</p>
+          <div class="food-card-footer">
+            <span class="food-price">$11.49</span>
+            <button class="add-btn" onclick="addToCart('t2','Chipotle Chicken Wrap',11.49,'https://images.unsplash.com/photo-1600891964092-4316c288032e?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <h3 class="menu-section-title">🍰 Desserts</h3>
+    <div class="food-grid" style="margin-bottom:50px">
+      <div class="food-card" data-cat="desserts">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=500&q=80" alt="Chocolate Lava Cake">
+          <div class="food-card-badges"><span class="badge badge-hot">Fan Fav</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 5.0</span><span class="food-time">⏱ 12 min</span></div>
+          <h3>Chocolate Lava Cake</h3>
+          <p>Warm chocolate cake with molten center, vanilla ice cream</p>
+          <div class="food-card-footer">
+            <span class="food-price">$8.99</span>
+            <button class="add-btn" onclick="addToCart('d1','Chocolate Lava Cake',8.99,'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="desserts">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&q=80" alt="Strawberry Cheesecake">
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.9</span><span class="food-time">⏱ 5 min</span></div>
+          <h3>Strawberry Cheesecake</h3>
+          <p>New York style, graham cracker crust, fresh strawberry topping</p>
+          <div class="food-card-footer">
+            <span class="food-price">$7.99</span>
+            <button class="add-btn" onclick="addToCart('d2','Strawberry Cheesecake',7.99,'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="desserts">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=500&q=80" alt="Loaded Milkshake">
+          <div class="food-card-badges"><span class="badge badge-new">New</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.8</span><span class="food-time">⏱ 8 min</span></div>
+          <h3>Loaded Milkshake</h3>
+          <p>Thick shake, whipped cream, toppings overload — pure indulgence</p>
+          <div class="food-card-footer">
+            <span class="food-price">$9.49</span>
+            <button class="add-btn" onclick="addToCart('d3','Loaded Milkshake',9.49,'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <h3 class="menu-section-title">🥤 Drinks</h3>
+    <div class="food-grid" style="margin-bottom:30px">
+      <div class="food-card" data-cat="drinks">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=500&q=80" alt="Fresh Lemonade">
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.8</span><span class="food-time">⏱ 5 min</span></div>
+          <h3>Daddy's Lemonade</h3>
+          <p>Fresh squeezed, mint, a hint of ginger — most refreshing drink</p>
+          <div class="food-card-footer">
+            <span class="food-price">$4.99</span>
+            <button class="add-btn" onclick="addToCart('dr1','Daddy\'s Lemonade',4.99,'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="drinks">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80" alt="Cold Brew Coffee">
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.9</span><span class="food-time">⏱ 5 min</span></div>
+          <h3>Cold Brew Coffee</h3>
+          <p>18-hour steeped cold brew, oat milk option, low acidity</p>
+          <div class="food-card-footer">
+            <span class="food-price">$5.49</span>
+            <button class="add-btn" onclick="addToCart('dr2','Cold Brew Coffee',5.49,'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="food-card" data-cat="drinks">
+        <div class="food-card-img">
+          <img src="https://images.unsplash.com/photo-1533482100069-36b62eafef5b?w=500&q=80" alt="Mango Smoothie">
+          <div class="food-card-badges"><span class="badge badge-new">Seasonal</span></div>
+          <button class="wishlist-btn" onclick="toggleWishlist(this)">🤍</button>
+        </div>
+        <div class="food-card-body">
+          <div class="food-card-meta"><span class="food-rating">★ 4.7</span><span class="food-time">⏱ 5 min</span></div>
+          <h3>Tropical Mango Smoothie</h3>
+          <p>Fresh mango, coconut milk, banana, turmeric — pure tropical bliss</p>
+          <div class="food-card-footer">
+            <span class="food-price">$6.49</span>
+            <button class="add-btn" onclick="addToCart('dr3','Tropical Mango Smoothie',6.49,'https://images.unsplash.com/photo-1533482100069-36b62eafef5b?w=200')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <div class="logo-icon">🍔</div>Daddy <span>of</span> Tastes
+        </a>
+        <p>Bold flavors, fast delivery. Redefining food delivery one bite at a time.</p>
+        <div class="social-links">
+          <a class="social-link">📘</a><a class="social-link">📸</a>
+          <a class="social-link">🐦</a><a class="social-link">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="tracking.html">Track Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Burgers</a></li>
+          <li><a href="#">Pizzas</a></li>
+          <li><a href="#">Chicken</a></li>
+          <li><a href="#">Tacos</a></li>
+          <li><a href="#">Desserts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><span>📍</span><span>123 Flavor St, Taste City</span></li>
+          <li><span>📞</span><span>+1 (800) DADDY-EAT</span></li>
+          <li><span>✉️</span><span>hello@daddyoftastes.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2025 Daddy of Tastes. All rights reserved.</p>
+      <div style="display:flex;gap:20px">
+        <a href="#" style="color:var(--text-muted)">Privacy</a>
+        <a href="#" style="color:var(--text-muted)">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
